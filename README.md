@@ -20,7 +20,7 @@ Each notebook computes embedding-space distances (cosine, Euclidean, Manhattan, 
 
 | Script | Description |
 |---|---|
-| `06_bigwig_scores.sh` | Extract GERP, PhastCons, and PhyloP scores via `bigWigAverageOverBed` |
+| `06_bigwig_scores.sh` | Extract PhyloP conservation scores via `bigWigAverageOverBed` |
 | `07_vep_annotation.sh` | Annotate variants with VEP (CADD plugin) |
 | `08_vep_filter.sh` | Select the max CADD-scoring transcript per variant from VEP output |
 
@@ -105,7 +105,5 @@ GPU with CUDA is strongly recommended. Tested with Python 3.10.
 | File | Source |
 |---|---|
 | `hg38.phyloP100way.bw` | UCSC hg38 |
-| `hg38.phastCons100way.bw` | UCSC hg38 |
-| `dbNsfpGerpRs.bw` | dbNSFP |
 | `mm39.phyloP35way.bw` | UCSC mm39 |
 | `whole_genome_SNVs.tsv.gz` | CADD v1.7 GRCh38 |
