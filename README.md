@@ -21,8 +21,8 @@ Each notebook computes embedding-space distances (cosine, Euclidean, Manhattan, 
 | Script | Description |
 |---|---|
 | `06_bigwig_scores.sh` | Extract GERP, PhastCons, and PhyloP scores via `bigWigAverageOverBed` |
-| `07_vep_annotation.sh` | Annotate variants with VEP (CADD, SIFT, PolyPhen plugins) |
-| `08_vep_filter.sh` | Select the max-scoring transcript per variant from VEP output |
+| `07_vep_annotation.sh` | Annotate variants with VEP (CADD plugin) |
+| `08_vep_filter.sh` | Select the max CADD-scoring transcript per variant from VEP output |
 
 ## Input format
 
@@ -98,7 +98,7 @@ GPU with CUDA is strongly recommended. Tested with Python 3.10.
 
 **Bash scripts (06–08):**
 - `bigWigAverageOverBed` — UCSC binary, download from https://hgdownload.soe.ucsc.edu/admin/exe/
-- `vep` — Ensembl VEP with CADD, SIFT, PolyPhen plugins
+- `vep` — Ensembl VEP with CADD plugin
 
 **Reference files required (set paths inside each script):**
 
