@@ -2,9 +2,7 @@
 # Annotate ClinVar SNV datasets with Ensembl VEP.
 #
 # Plugins used:
-#   CADD    — Combined Annotation Dependent Depletion (PHRED-scaled score)
-#   SIFT    — sorting intolerant from tolerant (per-transcript)
-#   PolyPhen — polymorphism phenotyping v2 (per-transcript)
+#   CADD — Combined Annotation Dependent Depletion (PHRED-scaled score)
 #
 # Output: tab-separated VEP output (--most_severe: one line per variant/transcript).
 #
@@ -58,8 +56,6 @@ for DATASET in "${DATASETS[@]}"; do
         --offline \
         --fork "$FORKS" \
         --tab \
-        --sift s \
-        --polyphen s \
         --most_severe \
         --input_file  "$INPUT" \
         --output_file "$OUTPUT"
