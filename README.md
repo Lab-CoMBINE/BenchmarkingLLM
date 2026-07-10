@@ -16,14 +16,6 @@ Each notebook computes embedding-space distances (cosine, Euclidean, Manhattan, 
 | `04_hyenadna_32k_inference.py` | HyenaDNA small-32k — LongSafari |
 | `05_evo2_inference.py` | Evo 2 7B — ARC Institute |
 
-### Functional impact annotation
-
-| Script | Description |
-|---|---|
-| `06_bigwig_scores.sh` | Extract PhyloP conservation scores via `bigWigAverageOverBed` |
-| `07_vep_annotation.sh` | Annotate variants with VEP (CADD plugin) |
-| `08_vep_filter.sh` | Select the max CADD-scoring transcript per variant from VEP output |
-
 ## Input format
 
 A plain-text file, one variant per line:
@@ -95,15 +87,3 @@ pysam   # only for 00_prepare_sequences.py
 evo2    # only for 05_evo2_inference.py
 ```
 GPU with CUDA is strongly recommended. Tested with Python 3.10.
-
-**Bash scripts (06–08):**
-- `bigWigAverageOverBed` — UCSC binary, download from https://hgdownload.soe.ucsc.edu/admin/exe/
-- `vep` — Ensembl VEP with CADD plugin
-
-**Reference files required (set paths inside each script):**
-
-| File | Source |
-|---|---|
-| `hg38.phyloP100way.bw` | UCSC hg38 |
-| `mm39.phyloP35way.bw` | UCSC mm39 |
-| `whole_genome_SNVs.tsv.gz` | CADD v1.7 GRCh38 |
